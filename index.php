@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>keyLabepi</title>
     </head>
     <body>
         <?php
@@ -11,14 +11,17 @@
             if(isset($_GET["a"])){
                 $idCart = $_GET["a"];
                 echo "Cartão lido: $idCart</br>";
-                if(verificaID($idCart)){
+                $aux = verificaCart($idCart);
+                if($aux){
                     //EXIBE LED VERDE
                     echo "</br>Usuário válido</br></br>";
+                    guardarLog("permitido", $aux);
                     //return 1;
                 }
                 else{
                     //EXIBE LED VERMELHO
                     echo "</br>Usuário inválido</br>";
+                    guardarLog("negado", $aux);
                     //return 0;
                 }
             }
