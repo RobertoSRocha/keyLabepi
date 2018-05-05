@@ -1,5 +1,5 @@
 <?php
-    
+    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     //LISTA USUÁRIO ATRAVÉS DO NOME
     function listarPorNome($nome) {
         $conn = F_conect();

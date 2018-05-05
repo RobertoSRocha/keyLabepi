@@ -1,4 +1,5 @@
 <?php
+    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     function editarUsu($nome, $cartao, $matricula, $id) {
         $conn = F_conect();
         $sql = " UPDATE users SET nome='" . $nome . "', idCartao='" . $cartao . "', matricula=" .$matricula . " WHERE idUser= " . $id;

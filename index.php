@@ -6,7 +6,8 @@
     </head>
     <body>
         <?php
-            include("Model/interfaceUser.php");
+            include("Model/User/interfaceUser.php");
+            include("Model/Log/interfaceLog.php");
             $idCart = null;
             if(isset($_GET["a"])){
                 $idCart = $_GET["a"];

@@ -1,4 +1,5 @@
 <?php
+    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     //DELETA USUARIO A PARTIR DO CARTAO
     function excluirUsu($cartao) {
         $conn = F_conect();

@@ -1,5 +1,5 @@
 <?php
-    require_once 'conectionBD.php';
+    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     function  verificaCart($idUsu) {
         $conn = F_conect();
         //$result = mysqli_query($conn, "SELECT * FROM users where idCartao=" . $idUsu);
