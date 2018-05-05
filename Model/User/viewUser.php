@@ -50,5 +50,22 @@
         }
         $conn->close();
     }
+    
+    //LISTA USUÁRIO ATRAVÉS DO ID
+    function listarPorId($id) {
+        $conn = F_conect();
+        $result = mysqli_query($conn, "Select * from users where idUser=" . $id);
+        if (mysqli_num_rows($result)) {
+            while ($row = $result->fetch_assoc()) {
+                echo"Nome:" . $row['nome'] . "</br>";
+                echo"Cartão: " . $row['idCartao'] . "</br>";
+                echo"Matrícula: " . $row['matricula'] . "</br>";
+            }
+        }
+        else{
+            echo "</br></br>Usuário não encontrado!</br></br>";
+        }
+        $conn->close();
+    }
 
 ?>

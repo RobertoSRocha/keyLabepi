@@ -8,6 +8,7 @@
         <?php
             include("Model/User/interfaceUser.php");
             include("Model/Log/interfaceLog.php");
+            
             $idCart = null;
             if(isset($_GET["a"])){
                 $idCart = $_GET["a"];
@@ -17,6 +18,7 @@
                     //EXIBE LED VERDE
                     echo "</br>Usuário válido</br></br>";
                     guardarLog("permitido", $aux);
+                    
                     //return 1;
                 }
                 else{
@@ -39,6 +41,12 @@
             listarPorNome("ronaldinho");
             listarPorCartao("ABCD010203");
             listarPorMatricula(20140602)
+            excluirLog(23);
+            excluirLogUser(2);
+            listarLogs();
+            listarLogsNeg();
+            listarLogsPerm();
+            listarLogsData('2018-05-05');
              * */
         ?>
     </body>

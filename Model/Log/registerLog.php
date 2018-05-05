@@ -4,8 +4,8 @@
     // Modifica a zona de tempo a ser utilizada.
     date_default_timezone_set('America/Sao_Paulo');
     function guardarLog($status, $user){
-        $date = date('Y-m-d');
-        echo "$date";
+        //$date = date('Y-m-d');
+        //echo "$date";
         
         $conn = F_conect();
         $sql = "INSERT INTO log(data, idUser, acesso)
