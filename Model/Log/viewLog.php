@@ -8,17 +8,33 @@ require_once 'C:\xampp\htdocs\keyLabepi\Model\User\viewUser.php';
         $result = mysqli_query($conn, "Select * from log");
         if (mysqli_num_rows($result)) {
             while ($row = $result->fetch_assoc()) {
-                echo"id:" . $row['id'] . "</br>";
-                //echo"idUser: " . $row['idUser'] . "</br>";
-                if($row['idUser']){
+                echo 
+                "<tr>
+                  <th>".$row['id']."</th>";
+                  if($row['idUser']){
                     listarPorId($row['idUser']);
-                }
-                echo"acesso: " . $row['acesso'] . "</br>";
-                echo"data: " . $row['data'] . "</br></br>";
+                  }
+                  else{
+                      echo
+                        "<th>" ."inexistente". "</th>
+                        <th>" . $row['cartao'] . "</th>
+                        <th>" ."inexistente". "</th>";
+                  }
+                  echo
+                  "<th>" . $row['acesso'] . "</th>
+                  <th>" . $row['data'] . "</th>
+                </tr>";
+                //echo"id:" . $row['id'] . "</br>";
+                //echo"idUser: " . $row['idUser'] . "</br>";
+                /*if($row['idUser']){
+                    listarPorId($row['idUser']);
+                }*/
+                //echo"acesso: " . $row['acesso'] . "</br>";
+                //echo"data: " . $row['data'] . "</br></br>";
             }
         }
         else{
-            echo "</br></br>Logs não encontrado!</br></br>";
+            echo "<h3>Logs não encontrados no banco de dados!</h3>";
         }
         $conn->close();
     }

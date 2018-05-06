@@ -57,9 +57,13 @@
         $result = mysqli_query($conn, "Select * from users where idUser=" . $id);
         if (mysqli_num_rows($result)) {
             while ($row = $result->fetch_assoc()) {
-                echo"Nome:" . $row['nome'] . "</br>";
-                echo"Cartão: " . $row['idCartao'] . "</br>";
-                echo"Matrícula: " . $row['matricula'] . "</br>";
+                //echo"Nome:" . $row['nome'] . "</br>";
+                //echo"Cartão: " . $row['idCartao'] . "</br>";
+                //echo"Matrícula: " . $row['matricula'] . "</br>";
+                echo
+                "<th>" . $row['nome'] . "</th>
+                  <th>" . $row['idCartao'] . "</th>
+                  <th>" . $row['matricula'] . "</th>";
             }
         }
         else{

@@ -3,14 +3,11 @@
     
     // Modifica a zona de tempo a ser utilizada.
     date_default_timezone_set('America/Sao_Paulo');
-    function guardarLog($status, $user){
-        //$date = date('Y-m-d');
-        //echo "$date";
-        
+    function guardarLog($status, $user, $cartao){ 
         $conn = F_conect();
-        $sql = "INSERT INTO log(data, idUser, acesso)
-                VALUES(NOW() ,$user, '" . $status . "')";
-        if ($conn->query($sql) == TRUE) {
+        $sql = "INSERT INTO log(data, idUser, acesso, cartao)
+                VALUES(NOW() ,$user, '" . $status . "', '" . $cartao . "')";
+        if ($conn->query($sql)) {
             echo("Oba!, Log cadastrado com sucesso</br>");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
