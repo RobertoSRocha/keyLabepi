@@ -36,16 +36,16 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="#">Adicionar</a>
+                <a href="gerenciarUserAdd.php">Adicionar</a>
             </li>
             <li>
-              <a href="#">Editar</a>
+                <a href="gerenciarUserEdit.php">Editar</a>
             </li>
             <li>
-              <a href="#">Listar</a>
+                <a href="gerenciarUserList.php">Listar</a>
             </li>
             <li>
-              <a href="#">Excluir</a>
+                <a href="gerenciarUserDelete.php">Excluir</a>
             </li>
           </ul>
         </li>
