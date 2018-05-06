@@ -1,4 +1,5 @@
 <?php
+    //VERIFICA SE EXISTE O CARTAO NO BANCO DE DADOS
     require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     function  verificaCart($idUsu) {
         $conn = F_conect();

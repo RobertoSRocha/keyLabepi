@@ -24,13 +24,6 @@ require_once 'C:\xampp\htdocs\keyLabepi\Model\User\viewUser.php';
                   "<th>" . $row['acesso'] . "</th>
                   <th>" . $row['data'] . "</th>
                 </tr>";
-                //echo"id:" . $row['id'] . "</br>";
-                //echo"idUser: " . $row['idUser'] . "</br>";
-                /*if($row['idUser']){
-                    listarPorId($row['idUser']);
-                }*/
-                //echo"acesso: " . $row['acesso'] . "</br>";
-                //echo"data: " . $row['data'] . "</br></br>";
             }
         }
         else{
