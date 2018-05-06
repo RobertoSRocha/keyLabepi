@@ -64,13 +64,14 @@ require_once 'C:\xampp\htdocs\keyLabepi\Model\User\viewUser.php';
         }
         $conn->close();
     }
-    /*
+    
     //LISTA TODOS OS LOGS POR DATA
-    function listarLogsData($data) {
+    /*function listarLogsData($data) {
         $conn = F_conect();
         echo date('Y-m-d', strtotime($data));
-        $result = mysqli_query($conn, "Select * from log where data=". $data);
-        if (mysqli_num_rows($result)) {
+        $result = mysqli_query($conn, "Select * from log where data like $data".'%');
+        echo "</br>$result";
+        if (isset(mysqli_num_rows($result))) {
             while ($row = $result->fetch_assoc()) {
                 echo"id:" . $row['id'] . "</br>";
                 //echo"idUser: " . $row['idUser'] . "</br>";
