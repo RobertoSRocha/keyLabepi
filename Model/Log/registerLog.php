@@ -1,6 +1,7 @@
 <?php
-    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
-    //require_once ('../config.php');
+
+    //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+    require_once ('../config.php');
     
     // Modifica a zona de tempo a ser utilizada.
     date_default_timezone_set('America/Sao_Paulo');

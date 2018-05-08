@@ -1,5 +1,9 @@
 <?php
-    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+
+    //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+    require_once ('../config.php');
+    
+    //CADASTRAR USUÁRIOS DO SISTEMA
     function cadastrarPessoa($nome, $cartao, $matricula){
         if(verificaID($cartao)){
             echo "Cartao já cadastrado!</br>";

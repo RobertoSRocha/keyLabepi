@@ -1,5 +1,9 @@
 <?php
-    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+    
+    //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+    require_once ('../config.php');
+    
+    //EDITAR UM USUÁRIO DO SISTEMA
     function editarUsu($nome, $cartao, $matricula, $id) {
         $conn = F_conect();
         $sql = " UPDATE users SET nome='" . $nome . "', idCartao='" . $cartao . "', matricula=" .$matricula . " WHERE idUser= " . $id;

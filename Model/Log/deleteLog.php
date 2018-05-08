@@ -1,5 +1,8 @@
 <?php
-    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+
+    //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+    require_once ('../config.php');
+    
     //DELETA Log A PARTIR DO ID
     function excluirLog($id) {
         $conn = F_conect();
