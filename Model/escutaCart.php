@@ -10,7 +10,8 @@
             include("Log/interfaceLog.php");
             
             $idCart = null;
-            if(isset($_GET["a"])){
+            //VERIFICA A EXISTÊNCIA DA VARIÁVEL E SE HÁ CONTEÚDO NELA
+            if(isset($_GET["a"]) && !empty($_GET["a"])){
                 $idCart = $_GET["a"];
                 echo "Cartão lido: $idCart</br>";
                 $aux = verificaCart($idCart);
