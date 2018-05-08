@@ -8,9 +8,11 @@
         <?php
             include("User/interfaceUser.php");
             include("Log/interfaceLog.php");
+            //include "C:\xampp\htdocs\keyLabepi\config.php";
             
             $idCart = null;
-            if(isset($_GET["a"])){
+            // Verifica se a variável $_GET["a"] não é vazia
+            if(isset($_GET["a"]) && !empty($_GET["a"])){
                 $idCart = $_GET["a"];
                 echo "Cartão lido: $idCart</br>";
                 $aux = verificaCart($idCart);
@@ -33,7 +35,7 @@
                 echo "Dados insuficientes!</br>";
                 //return 0;
             }
-
+            //teste();
             /*
             //TESTES
             cadastrarPessoa("Tafareu", "AIAI554477", 2014000000);
