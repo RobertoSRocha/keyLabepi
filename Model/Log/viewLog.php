@@ -1,7 +1,8 @@
 <?php
 
-require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
-require_once 'C:\xampp\htdocs\keyLabepi\Model\User\viewUser.php';
+    require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
+    //require_once ('../config.php');
+    require_once 'C:\xampp\htdocs\keyLabepi\Model\User\viewUser.php';
     //LISTA TODOS OS LOGS
     function listarLogs() {
         $conn = F_conect();
