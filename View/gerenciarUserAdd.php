@@ -113,6 +113,26 @@
   <div class="content-wrapper">
       
    <!-- PARTE INTERNA -->
+    
+  <div class="container">
+      <center><h2>Adicionar usuário</h2></center>
+    <form action="#">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Nome do usuário" name="nome">
+      </div>
+      <div class="form-group">
+        <label for="cartao">Cartão:</label>
+        <input type="text" class="form-control" id="cartao" placeholder="Cartão do usuário" name="cartao">
+      </div>
+      <div class="form-group">
+        <label for="matricula">Matrícula:</label>
+        <input type="number" class="form-control" id="matricula" placeholder="Matrícula do usuário" name="matricula">
+      </div>
+      <button type="submit" class="btn btn-default">Cadastrar</button>
+    </form>
+</div>
+  
    
   
    </div>
