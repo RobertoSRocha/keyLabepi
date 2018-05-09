@@ -2,10 +2,16 @@
 
     //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     require_once ('../config.php');
+    require_once 'user_verifica.php';
+    
+
+    cadastrarPessoa(htmlspecialchars($_POST['nome']), 
+            htmlspecialchars($_POST['cartao']), 
+            htmlspecialchars($_POST['matricula']));
     
     //CADASTRAR USUÁRIOS DO SISTEMA
     function cadastrarPessoa($nome, $cartao, $matricula){
-        if(verificaID($cartao)){
+        if(verificaCart($cartao)){
             echo "Cartao já cadastrado!</br>";
         }
         else{

@@ -116,7 +116,7 @@
     
   <div class="container">
       <center><h2>Adicionar usuário</h2></center>
-    <form action="#">
+      <form action="../Model/user_register.php" method="POST">
       <div class="form-group">
         <label for="nome">Nome:</label>
         <input type="text" class="form-control" id="nome" placeholder="Nome do usuário" name="nome">
@@ -131,7 +131,7 @@
       </div>
       <button type="submit" class="btn btn-default">Cadastrar</button>
     </form>
-</div>
+  </div>
   
    
   

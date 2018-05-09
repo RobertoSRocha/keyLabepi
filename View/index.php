@@ -142,7 +142,7 @@
               </tfoot>
               <tbody>
               <?php
-              require_once '..\Model\Log\interfaceLog.php';
+              require_once '..\Model\log_interface.php';
               listarLogs();
               ?>
               </tbody>
