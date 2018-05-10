@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Maio-2018 às 12:54
+-- Generation Time: 10-Maio-2018 às 05:05
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -43,11 +43,8 @@ CREATE TABLE `log` (
 --
 
 INSERT INTO `log` (`data`, `id`, `idUser`, `acesso`, `cartao`) VALUES
-('2018-05-06 19:18:34', 3, 2, 'permitido', 'CCDD123456'),
-('2018-05-06 19:19:42', 4, 2, 'permitido', 'CCDD123456'),
-('2018-05-06 19:26:24', 5, 1, 'permitido', 'AABB123456'),
-('2018-05-06 19:47:45', 6, 1, 'permitido', 'AABB123456'),
-('2018-05-06 20:20:58', 7, 1, 'permitido', 'AABB123456');
+('2018-05-09 23:56:51', 1, 26, 'permitido', 'AABB123456'),
+('2018-05-09 23:57:02', 2, 26, 'permitido', 'AABB123456');
 
 -- --------------------------------------------------------
 
@@ -59,17 +56,18 @@ CREATE TABLE `users` (
   `nome` varchar(255) NOT NULL,
   `idCartao` varchar(15) NOT NULL,
   `idUser` bigint(15) NOT NULL,
-  `matricula` bigint(15) NOT NULL
+  `matricula` bigint(15) NOT NULL,
+  `senha` varchar(255) DEFAULT NULL,
+  `permissao` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`nome`, `idCartao`, `idUser`, `matricula`) VALUES
-('roberto', 'AABB123456', 1, 2014060283),
-('ronaldo', 'CCDD123456', 2, 2014001122),
-('Amaro', 'POPO2018', 3, 2017010203);
+INSERT INTO `users` (`nome`, `idCartao`, `idUser`, `matricula`, `senha`, `permissao`) VALUES
+('Roberto', 'AABB123456', 26, 2014060283, '123', 1),
+('Ronaldo', 'ABCD123', 27, 2014556699, NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -95,13 +93,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUser` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUser` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

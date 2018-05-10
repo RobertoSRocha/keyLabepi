@@ -1,9 +1,7 @@
 <?php
 
-    //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
-     require_once ('..\Model\conectionBD.php');
-    //require_once 'C:\xampp\htdocs\keyLabepi\Model\User\viewUser.php';
-    require_once("../Model/User/viewUser.php");
+    require_once ('conectionBD.php');
+    require_once 'user_view.php';
     
     //LISTA TODOS OS LOGS
     function listarLogs() {

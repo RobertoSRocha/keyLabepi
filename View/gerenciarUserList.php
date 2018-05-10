@@ -113,7 +113,37 @@
   <div class="content-wrapper">
       
    <!-- PARTE INTERNA -->
-   
+   <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Visualizar Usuários - Labepi</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Cartão</th>
+                  <th>Matrícula</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Nome</th>
+                  <th>Cartão</th>
+                  <th>Matrícula</th>
+                </tr>
+              </tfoot>
+              <tbody>
+              <?php
+              require_once '../Model/user_view.php';
+              listarUsers();
+              ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
   
    </div>
     <footer class="sticky-footer">

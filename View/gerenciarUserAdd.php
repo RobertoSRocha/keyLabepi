@@ -113,28 +113,34 @@
   <div class="content-wrapper">
       
    <!-- PARTE INTERNA -->
-    
-  <div class="container">
-      <center><h2>Adicionar usuário</h2></center>
-      <form action="../Model/user_register.php" method="POST">
-      <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Nome do usuário" name="nome">
+  <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Adicionar Usuários - Labepi</div>
+        <div class="card-body">
+          <div class="table-responsive">
+                <form action="../Model/user_register.php" method="POST">
+                <div class="form-group">
+                  <label for="nome">Nome:</label>
+                  <input type="text" class="form-control" id="nome" 
+                         placeholder="Nome do usuário" name="nome" required="">
+                </div>
+                <div class="form-group">
+                  <label for="cartao">Cartão:</label>
+                  <input type="text" class="form-control" id="cartao" 
+                         placeholder="Cartão do usuário" name="cartao" required="">
+                </div>
+                <div class="form-group">
+                  <label for="matricula">Matrícula:</label>
+                  <input type="number" class="form-control" id="matricula" 
+                         placeholder="Matrícula do usuário" name="matricula" required="">
+                </div>
+                <button type="submit" class="btn btn-default">Cadastrar</button>
+              </form>
+          </div>
+        </div>
+        
       </div>
-      <div class="form-group">
-        <label for="cartao">Cartão:</label>
-        <input type="text" class="form-control" id="cartao" placeholder="Cartão do usuário" name="cartao">
-      </div>
-      <div class="form-group">
-        <label for="matricula">Matrícula:</label>
-        <input type="number" class="form-control" id="matricula" placeholder="Matrícula do usuário" name="matricula">
-      </div>
-      <button type="submit" class="btn btn-default">Cadastrar</button>
-    </form>
-  </div>
-  
    
-  
    </div>
     <footer class="sticky-footer">
       <div class="container">

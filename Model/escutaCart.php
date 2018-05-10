@@ -6,8 +6,8 @@
     </head>
     <body>
         <?php
-            include("User/interfaceUser.php");
-            include("Log/interfaceLog.php");
+            include("user_interface.php");
+            include("log_interface.php");
             
             $idCart = null;
             //VERIFICA A EXISTÊNCIA DA VARIÁVEL E SE HÁ CONTEÚDO NELA

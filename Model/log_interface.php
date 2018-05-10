@@ -1,7 +1,7 @@
 <?php
-    require_once("deleteLog.php");
-    require_once("registerLog.php");
-    require_once("viewLog.php");
+    require_once("log_delete.php");
+    require_once("log_register.php");
+    require_once("log_view.php");
     
 ?>
 

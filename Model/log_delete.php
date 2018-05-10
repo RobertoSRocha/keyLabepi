@@ -1,7 +1,7 @@
 <?php
 
     //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
-    require_once ('../config.php');
+    require_once ('conectionBD.php');
     
     //DELETA Log A PARTIR DO ID
     function excluirLog($id) {

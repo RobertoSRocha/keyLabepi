@@ -1,7 +1,28 @@
 <?php
 
     //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
-    require_once ('../config.php');
+    require_once ('conectionBD.php');
+    
+    //LISTA TODOS USUÁRIOS 
+    function listarUsers() {
+        $conn = F_conect();
+        $result = mysqli_query($conn, "Select * from users");
+        if (mysqli_num_rows($result)) {
+            while ($row = $result->fetch_assoc()) {
+                echo
+                "<tr>
+                <th>" . $row['nome'] . "</th>
+                  <th>" . $row['idCartao'] . "</th>
+                  <th>" . $row['matricula'] . "</th>
+                </tr>";
+  
+            }
+        }
+        else{
+            echo "</br></br>Usuário não encontrado!</br></br>";
+        }
+        $conn->close();
+    }
     
     //LISTA USUÁRIO ATRAVÉS DO NOME
     function listarPorNome($nome) {
