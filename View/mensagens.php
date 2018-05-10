@@ -1,8 +1,8 @@
 <script>
     function confirmar() {
         // só permitirá o envio se o usuário responder OK
-        alert("Usuário cadastrado com sucesso!");
-        location.replace('../View/gerenciarUserAdd.php');	
+        alert("Requisição atendida com sucesso!");
+        location.replace('../View/gerenciarUserList.php');	
         //else
             //return false;
     }

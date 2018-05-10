@@ -117,6 +117,9 @@
         <div class="card-header">
           <i class="fa fa-table"></i> Visualizar Usuários - Labepi</div>
         <div class="card-body">
+            <div class="button" align=right>
+            <button  type="submit" class="btn btn-default">Cadastrar</button><br></br>
+            </div>
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
@@ -124,6 +127,8 @@
                   <th>Nome</th>
                   <th>Cartão</th>
                   <th>Matrícula</th>
+                  <th>Editar</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tfoot>
@@ -131,6 +136,8 @@
                   <th>Nome</th>
                   <th>Cartão</th>
                   <th>Matrícula</th>
+                  <th>Editar</th>
+                  <th>Delete</th>
                 </tr>
               </tfoot>
               <tbody>

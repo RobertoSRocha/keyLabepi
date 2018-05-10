@@ -14,6 +14,18 @@
                 <th>" . $row['nome'] . "</th>
                   <th>" . $row['idCartao'] . "</th>
                   <th>" . $row['matricula'] . "</th>
+                  <th>
+                    <center><form action='user_acoes.php' method='post'>
+                        <button class='btn btn-default' name='edit' type='submmit' id='edit' value='". $row['idUser'] ."'>Editar</button>
+                            
+                  </th>
+                  <th>
+                    </form></center>
+                    <center><form action='user_acoes.php' method='post'>
+                        
+                        <button class='btn btn-default' name='delete' type='submmit' id='delete' value='". $row['idUser'] ."'>Deletar</button>
+                    </form></center>
+                  </th>
                 </tr>";
   
             }

@@ -118,7 +118,7 @@
           <i class="fa fa-table"></i> Adicionar Usuários - Labepi</div>
         <div class="card-body">
           <div class="table-responsive">
-                <form action="../Model/user_register.php" method="POST">
+            <form action="../Model/user_register.php" method="POST">
                 <div class="form-group">
                   <label for="nome">Nome:</label>
                   <input type="text" class="form-control" id="nome" 
@@ -134,8 +134,23 @@
                   <input type="number" class="form-control" id="matricula" 
                          placeholder="Matrícula do usuário" name="matricula" required="">
                 </div>
+                <div class="form-group">
+                  <label for="permissao">Permissao:</label></br>
+                  <select class="simple basic" name="permissao" id="permissao" required="">
+                    <option value="" ></option>
+                    <option value=1>Administrador</option>
+                    <option value=0>Usuário Comum</option>
+
+                  </select>
+                </div>
+                <!--<div class="form-group" id="senha" style="visibility:hidden; ">
+                  <label for="senha">Senha:</label>
+                  <input type="password" class="form-control" id="password" 
+                         placeholder="Senha do usuário" name="password">
+                </div>
+                -->
                 <button type="submit" class="btn btn-default">Cadastrar</button>
-              </form>
+            </form>
           </div>
         </div>
         
@@ -186,6 +201,17 @@
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
+    <!-- <script type="text/javascript">
+        function optionCheck() {
+          var option = document.getElementById("permissao").value;
+                if(option == 1){
+                    document.getElementById("senha").style.visibility ="visible";
+                }
+                if(option == 0){
+                    document.getElementById("senha").style.visibility ="hidden";
+                }
+        }
+    </script>-->
   </div>
 </body>
 
