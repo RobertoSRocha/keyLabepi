@@ -29,25 +29,11 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
           
         <!GERENCIAR USUÁRIOS>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="GerenciarUser">
+          <a class="nav-link" href="gerenciarUser.php">
+            <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Gerenciar usuários</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-                <a href="gerenciarUserAdd.php">Adicionar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserEdit.php">Editar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserList.php">Listar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserDelete.php">Excluir</a>
-            </li>
-          </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
@@ -115,10 +101,10 @@
    <!-- PARTE INTERNA -->
    <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Visualizar Usuários - Labepi</div>
+          <i class="fa fa-table"></i> Gerenciar Usuários - Labepi</div>
         <div class="card-body">
             <div class="button" align=right>
-            <button  type="submit" class="btn btn-default">Cadastrar</button><br></br>
+                <a href="gerenciarUserAdd.php" class="btn btn-primary pull-right h2">Cadastrar</a>
             </div>
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -127,8 +113,9 @@
                   <th>Nome</th>
                   <th>Cartão</th>
                   <th>Matrícula</th>
-                  <th>Editar</th>
-                  <th>Delete</th>
+                  <th>Permissão</th>
+                  <th>Ações</th>
+                  
                 </tr>
               </thead>
               <tfoot>
@@ -136,16 +123,17 @@
                   <th>Nome</th>
                   <th>Cartão</th>
                   <th>Matrícula</th>
-                  <th>Editar</th>
-                  <th>Delete</th>
+                  <th>Permissão</th>
+                  <th>Ações</th>
+                  
                 </tr>
               </tfoot>
-              <tbody>
-              <?php
-              require_once '../Model/user_view.php';
-              listarUsers();
-              ?>
-              </tbody>
+                <tbody>
+                    <?php
+                        require_once '../Model/user_acoes.php';
+                        acoesUsers();
+                    ?>
+		</tbody>
             </table>
           </div>
         </div>
@@ -174,7 +162,7 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Selecione "Logout" abaixo se você estiver pronto para terminar sua sessão atual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             <a class="btn btn-primary" href="login.html">Logout</a>
@@ -197,7 +185,6 @@
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
-  </div>
 </body>
 
 </html>

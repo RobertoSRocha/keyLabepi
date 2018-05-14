@@ -1,7 +1,7 @@
 <script>
     function confirmar() {
         // só permitirá o envio se o usuário responder OK
-        alert("Requisição atendida com sucesso!");
+        alert("Erro!");
         location.replace('../View/gerenciarUser.php');	
         //else
             //return false;

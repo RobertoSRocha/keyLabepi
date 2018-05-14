@@ -29,25 +29,12 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
           
         <!GERENCIAR USUÁRIOS>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        <!GERENCIAR USUÁRIOS>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="GerenciarUser">
+          <a class="nav-link" href="gerenciarUser.php">
+            <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Gerenciar usuários</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-                <a href="gerenciarUserAdd.php">Adicionar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserEdit.php">Editar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserList.php">Listar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserDelete.php">Excluir</a>
-            </li>
-          </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">

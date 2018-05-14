@@ -18,7 +18,7 @@
     //CADASTRAR USUÁRIOS DO SISTEMA
     function cadastrarUser($nome, $cartao, $matricula, $password, $permissao){
         if(verificaCart($cartao)){
-            echo "Cartao já cadastrado!</br>";
+            header('Location: ../View/mensagensErro.php');
         }
         else{
             $conn = F_conect();

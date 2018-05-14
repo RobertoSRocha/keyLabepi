@@ -13,7 +13,7 @@
                 "<tr>
                   <th>".$row['id']."</th>";
                   if($row['idUser']){
-                    listarPorId($row['idUser']);
+                      listarPorId($row['idUser']);
                   }
                   else{
                       echo
@@ -74,6 +74,7 @@
         }
         $conn->close();
     }
+    
     
     //LISTA TODOS OS LOGS POR DATA
     /*function listarLogsData($data) {

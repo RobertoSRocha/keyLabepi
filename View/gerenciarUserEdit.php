@@ -29,25 +29,11 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
           
         <!GERENCIAR USUÁRIOS>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="GerenciarUser">
+          <a class="nav-link" href="gerenciarUser.php">
+            <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Gerenciar usuários</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-                <a href="gerenciarUserAdd.php">Adicionar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserEdit.php">Editar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserList.php">Listar</a>
-            </li>
-            <li>
-                <a href="gerenciarUserDelete.php">Excluir</a>
-            </li>
-          </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
@@ -113,7 +99,23 @@
   <div class="content-wrapper">
       
    <!-- PARTE INTERNA -->
-   
+   <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Visualizar Usuários - Labepi</div>
+        <div class="card-body">
+            <div class="button" align=right>
+                <a href="gerenciarUserAdd.php" class="btn btn-primary pull-right h2">Cadastrar</a>
+            </div>
+          <div class="table-responsive">
+            <?php
+                require_once '../Model/user_view.php';
+                $id = htmlspecialchars($_GET['id']);
+                listarEditPorId($id);
+            ?>
+          </div>
+        </div>
+        
+      </div>
   
    </div>
     <footer class="sticky-footer">
@@ -160,7 +162,6 @@
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
-  </div>
 </body>
 
 </html>
