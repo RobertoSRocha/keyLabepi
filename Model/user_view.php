@@ -92,36 +92,45 @@
             while ($row = $result->fetch_assoc()) {
             echo
             "<form action='../Model/user_edit.php' method='POST'>
-                <div class='form-group' style='visibility:hidden;>
-                    <label for='nome'>ID do Usuário:</label>
-                    <input type='text' class='form-control' id='idUser' 
-                         placeholder='" . $row['idUser'] . "' name='idUser'>
+                <div class='form-group'>
+                    <label for='id'></label>
+                    <input type='hidden' class='form-control' id='idUser' 
+                         value='" . $row['idUser'] . "' name='idUser'>
                 </div>
                 <div class='form-group'>
                     <label for='nome'>Nome:</label>
                     <input type='text' class='form-control' id='nome' 
-                         placeholder='" . $row['nome'] . "' name='nome'>
+                         value='" . $row['nome'] . "' name='nome'>
                 </div>
                 <div class='form-group'>
                     <label for='cartao'>Cartão:</label>
                     <input type='text' class='form-control' id='cartao' 
-                        placeholder='" . $row['idCartao'] . "' name='cartao'>
+                        value='" . $row['idCartao'] . "' name='cartao'>
                 </div>
                 <div class='form-group'>
                     <label for='matricula'>Matrícula:</label>
                     <input type='number' class='form-control' id='matricula' 
-                        placeholder='" . $row['matricula'] . "' name='matricula'>
+                        value='" . $row['matricula'] . "' name='matricula'>
                 </div>
                 <div class='form-group'>
-                    <label for='permissao'>Permissao:</label></br>
-                    <select class='simple basic' name='permissao' id='permissao'>
-                        <option value=''></option>
-                        <option value=1>Administrador</option>
-                        <option value=0>Usuário Comum</option>
-                    </select>
-                </div>
+                    <label for='permissao'>Permissao:</label></br>";
+                    if($row['permissao']){
+                        echo
+                        "<select class='simple basic' name='permissao' id='permissao'>
+                            <option value=1 selected> Administrador</option>
+                            <option value=0>Usuário Comum</option>
+                        </select>";
+                    }else{
+                        echo
+                        "<select class='simple basic' name='permissao' id='permissao'>
+                            <option value=1>Administrador</option>
+                            <option value=0 selected>Usuário Comum</option>
+                        </select>";
+                    }
+                echo    
+                "</div>
                 <button type='submit' class='btn btn-warning btn-xs'>Atualizar</button>
-                <button type='submit' class='btn btn-danger btn-xs'>Cancelar</button>
+                <a class='btn btn-danger btn-xs'  href='../View/gerenciarUser.php'>Cancelar</a>
             </form>";
             }
         }
