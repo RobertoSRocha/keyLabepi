@@ -28,7 +28,7 @@
             }
         }
         else{
-            echo "<h3>Logs não encontrados no banco de dados!</h3>";
+            //echo "<h3>Logs não encontrados no banco de dados!</h3>";
         }
         $conn->close();
     }
