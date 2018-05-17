@@ -33,7 +33,7 @@
                    type="password" placeholder="Password" required="">
           </div>
           
-            <a class="btn btn-primary btn-block" href="#login">Login</a>
+            <input class="btn btn-primary btn-block" value="Login" type="submit">
         </form>
       </div>
     </div>

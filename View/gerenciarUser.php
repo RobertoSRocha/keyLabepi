@@ -185,6 +185,16 @@
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
+    
+    <script>function excluirUser(idUser){
+        var conf=confirm("Você tem certeza disso?");
+        if(conf){
+            location.replace("../Model/user_delete.php?idUser="+idUser);
+        }else{
+            href="#";
+        }
+        
+    }</script>
 </body>
 
 </html>
