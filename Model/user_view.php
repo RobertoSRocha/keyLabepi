@@ -90,48 +90,50 @@
         $result = mysqli_query($conn, "Select * from users where idUser=" . $id);
         if (mysqli_num_rows($result)) {
             while ($row = $result->fetch_assoc()) {
-            echo
-            "<form action='../Model/user_edit.php' method='POST'>
-                <div class='form-group'>
-                    <label for='id'></label>
-                    <input type='hidden' class='form-control' id='idUser' 
-                         value='" . $row['idUser'] . "' name='idUser'>
-                </div>
-                <div class='form-group'>
-                    <label for='nome'>Nome:</label>
-                    <input type='text' class='form-control' id='nome' 
-                         value='" . $row['nome'] . "' name='nome'>
-                </div>
-                <div class='form-group'>
-                    <label for='cartao'>Cartão:</label>
-                    <input type='text' class='form-control' id='cartao' 
-                        value='" . $row['idCartao'] . "' name='cartao'>
-                </div>
-                <div class='form-group'>
-                    <label for='matricula'>Matrícula:</label>
-                    <input type='number' class='form-control' id='matricula' 
-                        value='" . $row['matricula'] . "' name='matricula'>
-                </div>
-                <div class='form-group'>
-                    <label for='permissao'>Permissao:</label></br>";
-                    if($row['permissao']){
-                        echo
-                        "<select class='simple basic' name='permissao' id='permissao'>
-                            <option value=1 selected> Administrador</option>
-                            <option value=0>Usuário Comum</option>
-                        </select>";
-                    }else{
-                        echo
-                        "<select class='simple basic' name='permissao' id='permissao'>
-                            <option value=1>Administrador</option>
-                            <option value=0 selected>Usuário Comum</option>
-                        </select>";
-                    }
-                echo    
-                "</div>
-                <button type='submit' class='btn btn-warning btn-xs'>Atualizar</button>
-                <a class='btn btn-danger btn-xs'  href='../View/gerenciarUser.php'>Cancelar</a>
-            </form>";
+                echo
+                "<form action='../Model/user_edit.php' method='POST'>
+                    <div class='form-group'>
+                        <label for='id'></label>
+                        <input type='hidden' class='form-control' id='idUser' 
+                             value='" . $row['idUser'] . "' name='idUser'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='nome'>Nome:</label>
+                        <input type='text' class='form-control' id='nome' 
+                             value='" . $row['nome'] . "' name='nome'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='cartao'>Cartão:</label>
+                        <input type='text' class='form-control' id='cartao' 
+                            value='" . $row['idCartao'] . "' name='cartao'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='matricula'>Matrícula:</label>
+                        <input type='number' class='form-control' id='matricula' 
+                            value='" . $row['matricula'] . "' name='matricula'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='permissao'>Permissao:</label></br>";
+                        if($row['permissao']){
+                            echo
+                            "<select class='simple basic' name='permissao' id='permissao'>
+                                <option value=1 selected> Administrador</option>
+                                <option value=0>Usuário Comum</option>
+                            </select>";
+                        }else{
+                            echo
+                            "<select class='simple basic' name='permissao' id='permissao'>
+                                <option value=1>Administrador</option>
+                                <option value=0 selected>Usuário Comum</option>
+                            </select>";
+                        }
+                        $idUser=$row['idUser'];
+                    echo    
+                    "</div>
+                    <button type='submit' class='btn btn-warning btn-xs'>Atualizar</button>
+                    <a class='btn btn-success btn-xs' href='../View/gerenciarUserEditSenha.php?idUser=$idUser'>Editar Senha</a>
+                    <a class='btn btn-danger btn-xs'  href='../View/gerenciarUser.php'>Cancelar</a>
+                </form>";
             }
         }
         else{
@@ -204,6 +206,39 @@
         }
         else{
             echo "</br></br>Usuário não encontrado!</br></br>";
+        }
+        $conn->close();
+    }
+    
+    //EDITAR SENHA DO USUÁRIO DO SISTEMA
+    function editarSenha($id) {
+        $conn = F_conect();
+        $result = mysqli_query($conn, "Select * from users where idUser=" . $id);
+        if (mysqli_num_rows($result)) {
+            while ($row = $result->fetch_assoc()) {
+                echo
+                "<form action='../Model/user_editSenha.php' method='POST'>
+                    <div class='form-group'>
+                        <label for='id'></label>
+                        <input type='hidden' class='form-control' id='idUser' 
+                             value='" . $row['idUser'] . "' name='idUser'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='nome'>Senha:</label>
+                        <input type='text' class='form-control' id='senha' 
+                             value='" . $row['senha'] . "' name='senha'>
+                    </div>";
+                    
+                        //$idUser=$row['idUser'];
+                    echo    
+                    "</div>
+                    <button type='submit' class='btn btn-warning btn-xs'>Atualizar</button>
+                    <a class='btn btn-danger btn-xs'  href='../View/gerenciarUser.php'>Cancelar</a>
+                </form>";
+            }
+        }
+        else{
+            header('Location: ../View/mensagensErro.php');
         }
         $conn->close();
     }

@@ -101,7 +101,7 @@
    <!-- PARTE INTERNA -->
    <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Visualizar Usuários - Labepi</div>
+          <i class="fa fa-table"></i> Editar Usuários - Labepi</div>
         <div class="card-body">
             <div class="button" align=right>
                 <a href="gerenciarUserAdd.php" class="btn btn-primary pull-right h2">Cadastrar</a>

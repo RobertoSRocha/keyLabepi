@@ -24,7 +24,7 @@
                     echo
                     "<td class='actions'>
 			
-			<a class='btn btn-warning btn-xs' href='../View/gerenciarUserEdit.php?id=$idUser'>Editar</a>
+			<a class='btn btn-success btn-xs' href='../View/gerenciarUserEdit.php?id=$idUser'>Editar</a>
 			<a class='btn btn-danger btn-xs'  href='javascript:excluirUser($idUser)'>Excluir</a>
                     </td>
                 </tr>";
@@ -32,7 +32,7 @@
             }
         }
         else{
-            header('Location: ../View/mensagensErro.php');
+            //header('Location: ../View/mensagensErro.php');
         }
         $conn->close();
     }
