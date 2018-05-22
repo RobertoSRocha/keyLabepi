@@ -4,10 +4,6 @@
     require_once ('conectionBD.php');
     require_once 'user_verifica.php';
     
-    
-    
-    
-    
     cadastrarUser(htmlspecialchars($_POST['nome']), 
         htmlspecialchars($_POST['cartao']), 
         htmlspecialchars($_POST['matricula']),

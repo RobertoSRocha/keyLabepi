@@ -1,6 +1,6 @@
 <?php
-    include("user_interface.php");
-    include("log_interface.php");
+    require_once("user_verifica.php");
+    require_once("log_register.php");
     $idCart = null;
     //VERIFICA A EXISTÊNCIA DA VARIÁVEL E SE HÁ CONTEÚDO NELA
     if(isset($_GET["a"]) && !empty($_GET["a"])){

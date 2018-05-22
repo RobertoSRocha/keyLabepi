@@ -1,6 +1,4 @@
 <?php
-
-    //require_once 'C:\xampp\htdocs\keyLabepi\Model\conectionBD.php';
     require_once ('conectionBD.php');
     
     //VERIFICA SE EXISTE O CARTAO NO BANCO DE DADOS
