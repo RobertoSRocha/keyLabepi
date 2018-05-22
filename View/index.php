@@ -1,3 +1,8 @@
+<?php
+    require_once '../Model/daoseguranca.php';
+    $user = verificarLogin();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -91,7 +96,7 @@
       <!-- PARTE SUPERIOR DIREITA -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
@@ -163,7 +168,7 @@
           <div class="modal-body">Selecione "Logout" abaixo se você estiver pronto para terminar sua sessão atual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="#">Logout</a>
+            <a class="btn btn-primary" href="../Model/user_logout.php">Logout</a>
           </div>
         </div>
         

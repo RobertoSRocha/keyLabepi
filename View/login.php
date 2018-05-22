@@ -1,3 +1,12 @@
+<?php
+require_once '../Model/daoseguranca.php';
+
+if (isset($_POST['login'])) {
+
+    startLogin(htmlspecialchars($_POST['matricula'], ENT_QUOTES, 'UTF-8'), htmlspecialchars($_POST['senha'], ENT_QUOTES, 'UTF-8'));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,19 +30,19 @@
     <div class="card card-login mx-auto mt-5">
         <center><h4><div class="card-header">Login</div></h4></center>
       <div class="card-body">
-        <form class="form-signin" action="" method="post">
+          <form class="form-signin" action="" method="post">
           <div class="form-group">
-            <label for="nome">Matrícula</label>
-            <input class="form-control" id="exampleInputEmail1" type="number" 
-                   placeholder="Enter matrícula" required="">
+            <label for="matricula">Matrícula</label>
+            <input class="form-control" type="number" placeholder="Enter matrícula" 
+                   id="matricula" name="matricula" required="">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input class="form-control" id="exampleInputPassword1" 
-                   type="password" placeholder="Password" required="">
+            <label for="senha">Senha</label>
+            <input class="form-control" type="password" placeholder="Password" 
+                   id="senha" name="senha" required="">
           </div>
           
-            <input class="btn btn-primary btn-block" value="Login" type="submit">
+            <input class="btn btn-primary btn-block" value="Login" type="submit" name="login">
         </form>
       </div>
     </div>
