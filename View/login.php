@@ -1,5 +1,6 @@
 <?php
-require_once '../Model/daoseguranca.php';
+
+require_once '../Model/daoSeguranca.php';
 
 if (isset($_POST['login'])) {
 

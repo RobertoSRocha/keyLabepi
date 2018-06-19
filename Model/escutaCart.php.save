@@ -10,9 +10,8 @@ define("DEBUG", FALSE);
     //VERIFICA A EXISTÊNCIA DA VARIÁVEL E SE HÁ CONTEÚDO NELA
     if(isset($_GET["uid"]) && !empty($_GET["uid"])){
         $idCart = $_GET["uid"];
-	if (DEBUG){
-        	echo "Cartão lido: $idCart</br>";
-	}
+	if (DEBUG)
+        echo "Cartão lido: $idCart</br>";
         $aux = verificaCart($idCart);
         if($aux){
   		//EXIBE LED VERDE	
@@ -21,18 +20,19 @@ define("DEBUG", FALSE);
 		}
 		else{
 			echo "$idCart|1";
-		}
- 		guardarLog("permitido", $aux, $idCart);
+		}	guardarLog("permitido", $aux, $idCart);
         }
-	else{
-		//EXIBE LED VERMELHO
-		if (DEBUG){
-			echo "</br>Usuário inválido</br>";
-		}
 		else{
-            		echo "$idCart|0";
-		}
- 		guardarLog("negado", $aux, $idCart);
+			//EXIBE LED VERMELHO
+			if (DEBUG)
+			{
+				echo "</br>Usuário inválido</br>";
+			}
+			else
+			{
+            	echo "$idCart|0";
+			}
+            guardarLog("negado", $aux, $idCart);
         }
     }
     else{

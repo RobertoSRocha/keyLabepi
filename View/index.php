@@ -1,5 +1,8 @@
 <?php
-    require_once '../Model/daoseguranca.php';
+
+error_reporting( E_ALL );
+
+    require_once('../Model/daoSeguranca.php');
     $user = verificarLogin();
 ?>
 

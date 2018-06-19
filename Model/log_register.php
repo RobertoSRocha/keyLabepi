@@ -10,7 +10,8 @@
         $sql = "INSERT INTO log(data, idUser, acesso, cartao)
                 VALUES(NOW() ,$user, '" . $status . "', '" . $cartao . "')";
         if ($conn->query($sql)) {
-            echo("Oba, Log cadastrado com sucesso</br>");
+		if(DEBUG)
+			echo("Oba, Log cadastrado com sucesso</br>");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
