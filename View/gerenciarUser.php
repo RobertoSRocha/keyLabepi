@@ -40,7 +40,10 @@
             <span class="nav-link-text">Gerenciar usuários</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        
+        <!-- ACESSOS EM GRÁFICOS -->
+        
+        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Acessos</span>
@@ -81,7 +84,7 @@
               </ul>
             </li>
           </ul>
-        </li>
+        </li>-->
       </ul>
       
       <ul class="navbar-nav sidenav-toggler">
@@ -96,7 +99,7 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <i class="fa fa-fw fa-sign-out"></i> Logout</a>
         </li>
       </ul>
     </div>

@@ -8,6 +8,7 @@
         //nome do usuário
         $usuario = "root";
         //senha
+        //$senha = "";
         $senha = "bdbrainiac";
         // Criando conexão com o Banco de Dados
         $conn = new mysqli($servidor, $usuario, $senha,$nomebanco);

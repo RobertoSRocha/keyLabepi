@@ -226,7 +226,7 @@
                     <div class='form-group'>
                         <label for='nome'>Senha:</label>
                         <input type='text' class='form-control' id='senha' 
-                             value='" . $row['senha'] . "' name='senha'>
+                             value='" . base64_decode($row['senha']) . "' name='senha'>
                     </div>";
                     
                         //$idUser=$row['idUser'];

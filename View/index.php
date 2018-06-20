@@ -1,11 +1,3 @@
-<?php
-
-error_reporting( E_ALL );
-
-    require_once('../Model/daoSeguranca.php');
-    $user = verificarLogin();
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -44,7 +36,10 @@ error_reporting( E_ALL );
             <span class="nav-link-text">Gerenciar usuários</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        
+        <!-- ACESSOS EM GRÁFICOS -->
+        
+        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Acessos</span>
@@ -85,7 +80,7 @@ error_reporting( E_ALL );
               </ul>
             </li>
           </ul>
-        </li>
+        </li>-->
       </ul>
       
       <ul class="navbar-nav sidenav-toggler">
@@ -100,7 +95,17 @@ error_reporting( E_ALL );
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
             <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <i class="fa fa-fw fa-sign-out"></i>
+                <?php 
+                    error_reporting( E_ALL );
+                    require_once('../Model/daoSeguranca.php');
+                    if(verificarLoginLogout()){
+                        echo 'Logout';
+                    }else{
+                        echo 'Login';
+                    }
+                ?> 
+            </a>
         </li>
       </ul>
     </div>
@@ -159,7 +164,11 @@ error_reporting( E_ALL );
       <i class="fa fa-angle-up"></i>
     </a>
     
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <?php 
+                    error_reporting( E_ALL );
+                    require_once('../Model/daoSeguranca.php');
+                    if(verificarLoginLogout()){
+                        echo '<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">  
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -176,7 +185,29 @@ error_reporting( E_ALL );
         </div>
         
       </div>
-    </div>
+    </div>';
+                    }else{
+                        echo '<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" href="login.php">  
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Deseja realmente logar?</h5>
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                              <a class="btn btn-primary" href="login.php">Login</a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>';
+                        
+                    }
+                ?> 
+    
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

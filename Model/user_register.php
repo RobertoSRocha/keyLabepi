@@ -7,7 +7,7 @@
     cadastrarUser(htmlspecialchars($_POST['nome']), 
         htmlspecialchars($_POST['cartao']), 
         htmlspecialchars($_POST['matricula']),
-        'mudar123',
+        base64_encode('mudar123'),
         htmlspecialchars($_POST['permissao']));
         
     

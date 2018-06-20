@@ -70,4 +70,31 @@ function verificarLogin() {
     }
 }
 
+function verificarLoginLogout() {
+
+    /*
+     * Logo abaixo temos um bloco com if e else, verificando se a variável $result foi bem sucedida,
+     * ou seja se ela estiver encontrado algum registro idêntico o seu valor será igual a 1, se não,
+     * se não tiver registros seu valor será 0. Dependendo do resultado ele redirecionará para a pagina site.php
+     * ou retornara  para a pagina do formulário inicial para que se possa tentar novamente realizar o login
+     */
+    session_name(md5("seg" . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']));
+
+ //   session_cache_expire(100);
+
+    session_start();
+
+    if (isset($_SESSION['matricula']) and isset($_SESSION['senha']) and isset($_SESSION['nome'])) {
+        
+        return TRUE;
+        
+    } else {
+        unset($_SESSION['matricula']);
+        unset($_SESSION['senha']);
+        unset($_SESSION['nome']); 
+        
+        return FALSE;
+    }
+}
+
 ?>

@@ -6,8 +6,9 @@
     
     //EDITAR UM USUÁRIO DO SISTEMA
     function editarSenha($idUser, $senha) {
+        $senhaCodificada = base64_encode($senha);
         $conn = F_conect();
-        $sql = ("UPDATE users SET senha='" .$senha . "' WHERE idUser=".$idUser);
+        $sql = ("UPDATE users SET senha='" .$senhaCodificada . "' WHERE idUser=".$idUser);
         if ($conn->query($sql)) {
             header('Location: ../View/mensagens.php');
             //echo "<a href='home.php'> Voltar a tela de login</a>";

@@ -4,7 +4,7 @@ require_once '../Model/daoSeguranca.php';
 
 if (isset($_POST['login'])) {
 
-    startLogin(htmlspecialchars($_POST['matricula'], ENT_QUOTES, 'UTF-8'), htmlspecialchars($_POST['senha'], ENT_QUOTES, 'UTF-8'));
+    startLogin(htmlspecialchars($_POST['matricula'], ENT_QUOTES, 'UTF-8'), htmlspecialchars(base64_encode($_POST['senha']), ENT_QUOTES, 'UTF-8'));
 }
 ?>
 
